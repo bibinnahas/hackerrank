@@ -1,7 +1,8 @@
 package hackerrank
+
 import java.io._
 
-object HourGlassTwoDArray {
+object test {
 
   // Complete the hourglassSum function below.
   def hourglassSum(mymultiarr: Array[Array[Int]]): Int = {
