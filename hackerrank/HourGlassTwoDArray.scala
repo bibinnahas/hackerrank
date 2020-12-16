@@ -5,7 +5,7 @@ object HourGlassTwoDArray {
 
   // Complete the hourglassSum function below.
   def hourglassSum(mymultiarr: Array[Array[Int]]): Int = {
-    var acc = 0
+    var acc = -9999
     for (i <- 1 to 5) {
       val j = (i - 1, i, i + 1)
       for (iN <- 1 to 4) {
