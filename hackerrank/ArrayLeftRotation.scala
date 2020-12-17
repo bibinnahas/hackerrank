@@ -34,7 +34,7 @@ object ArrayLeftRotation {
   def main(args: Array[String]) {
 
     val stdin = scala.io.StdIn
-    //val printWriter = new PrintWriter(sys.env.getOrElse("OUTPUT_PATH","/home/thesnibibin/out/out"))
+    //val printWriter = new PrintWriter(sys.env.getOrElse("OUTPUT_PATH",""))
     val printWriter = new PrintWriter(sys.env("OUTPUT_PATH"))
     val nd = stdin.readLine.split(" ")
     val n = nd(0).trim.toInt
