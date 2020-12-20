@@ -34,15 +34,15 @@ object ArrayLeftRotation {
   def main(args: Array[String]) {
 
     val stdin = scala.io.StdIn
-    //val printWriter = new PrintWriter(sys.env.getOrElse("OUTPUT_PATH",""))
-    val printWriter = new PrintWriter(sys.env("OUTPUT_PATH"))
+    val printWriter = new PrintWriter(sys.env.getOrElse("OUTPUT_PATH","/home/thesnibibin/out/out"))
+    //val printWriter = new PrintWriter(sys.env("OUTPUT_PATH"))
     val nd = stdin.readLine.split(" ")
     val n = nd(0).trim.toInt
     val d = nd(1).trim.toInt
     val a = stdin.readLine.split(" ").map(_.trim.toInt)
     val result = rotateArraySlice(a, n, d)
     //val t1 = System.nanoTime
-    //println(result.toList)
+    println(result.toList)
     printWriter.println(result.mkString(" "))
     printWriter.close()
     //println((System.nanoTime - t1))
