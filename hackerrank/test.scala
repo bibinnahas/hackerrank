@@ -4,31 +4,21 @@ import java.io._
 
 object test {
 
-  // Complete the hourglassSum function below.
-  def hourglassSum(mymultiarr: Array[Array[Int]]): Int = {
-    var acc = 0
-    for (i <- 1 to 5) {
-      val j = (i - 1, i, i + 1)
-      for (iN <- 1 to 4) {
-        if (j._3 != 6) {
-          //val jN = (iN - 1, iN, iN + 1)
-          val l = List(mymultiarr(iN - 1)(j._1), mymultiarr(iN - 1)(j._2),mymultiarr(iN - 1)(j._3),mymultiarr(iN)(j._2),mymultiarr(iN + 1)(j._1)
-            ,mymultiarr(iN + 1)(j._2),mymultiarr(iN + 1)(j._3))
-          if (l.sum > acc) {
-            acc = l.sum
-          }
-        }
-      }
-    }
-    acc
-  }
-
   def main(args: Array[String]) {
-    val stdin = scala.io.StdIn
-    val arr = Array.ofDim[Int](6, 6)
-    for (i <- 0 until 6) {
-      arr(i) = stdin.readLine.split(" ").map(_.trim.toInt)
-    }
-    println(hourglassSum(arr))
+//    println("xxxxx: "+(1 & -1))
+//    println("xxxxx: "+(2 & -2))
+//    println("xxxxx: "+(3 & -3))
+//    println("xxxxx: "+(4 & -4))
+//    println("xxxxx: "+(5 & -5))
+//    println("xxxxx: "+(6 & -6))
+//    println("xxxxx: "+(7 & -7))
+//    println("xxxxx: "+(8 & -8))
+    val a = 5
+    var id = a
+    id += (id & -id)
+    println(id)
+    var id1 = a
+    id1 -= (id1 & -id1)
+    println(id1)
   }
 }
